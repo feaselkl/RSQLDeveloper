@@ -2,7 +2,7 @@
 .reveal section img { background:none; border:none; box-shadow:none; }
 </style>
 
-## Data Cleansing with SQL and R
+## R for the SQL Server Developer
 
 <a href="http://www.catallaxyservices.com">Kevin Feasel</a> (<a href="https://twitter.com/feaselkl">@feaselkl</a>)
 <a href="http://csmore.info/on/r">http://CSmore.info/on/r</a>
@@ -57,8 +57,8 @@ R is an off-shoot of the S language and is built on top of C.
 R provides several advantages as a data analysis Domain Specific Language (DSL):
 
 * R has a large number of built-in functions for performing operations, including aggregates, statistical analysis, and graphing and plotting.
-* The R ecosystem is vast.  With CRAN (CPAN or NuGet for R), thousands of open-source packages are available to help you solve common data cleansing, data analysis, and plotting problems.
-* R language constructs make set-based analysis and operation easy, improving performance and reducing the transition period for SQL Server developers.
+* The R ecosystem is vast, with over 12K packages in CRAN.
+* R language constructs make set-based analysis and operation easy.
 
 R helps you go well beyond simple Excel analysis and pivot tables.
 
@@ -68,10 +68,9 @@ R helps you go well beyond simple Excel analysis and pivot tables.
 
 My goals in this talk:
 
-* Introduce you to the R ecosystem, including programs, libraries, and places to learn more.
-* Introduce you to the R language and show how to connect to SQL Server, as well as a few things you can do with R.
-* Introduce you to notebooks and show how they can serve as pedagogical or scientific purposes.
-* Get you thinking about ways you could use R in your environment today.
+* Introduce you to the R ecosystem and language.
+* Introduce you to the value of notebooks.
+* Get you thinking about ways you could use R today.
 
 Note that R is not the only data analysis language you could learn.  Julia and Python are also great languages, and there are very good closed-source, commercial tools like SAS.
 
@@ -134,7 +133,7 @@ There is one big IDE available:  RStudio.  RStudio is a standalone installation 
 
 Microsoft has also made available R Tools for Visual Studio (RTVS), a Visual Studio plug-in.  It offers some interesting features like making SQL Server R Services integration easier, and it integrates with other Visual Studio projects. It is also built into Visual Studio 2017.
 
----?image=presentation/assets/background/2_4_jupyter.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_4_jupyter.jpg&size=cover&opacity=25
 
 ### Jupyter
 
