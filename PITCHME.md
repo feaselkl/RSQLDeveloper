@@ -54,7 +54,7 @@ R is an off-shoot of the S language and is built on top of C.
 
 ### Why Use R?
 
-R provides several advantages as a data analysis Domain Specific Language (DSL):
+As a data analysis Domain Specific Language (DSL):
 
 * R has a large number of built-in functions for performing operations, including aggregates, statistical analysis, and graphing and plotting.
 * The R ecosystem is vast, with over 12K packages in CRAN.
@@ -133,7 +133,7 @@ There is one big IDE available:  RStudio.  RStudio is a standalone installation 
 
 Microsoft has also made available R Tools for Visual Studio (RTVS), a Visual Studio plug-in.  It offers some interesting features like making SQL Server R Services integration easier, and it integrates with other Visual Studio projects. It is also built into Visual Studio 2017.
 
----?image=presentation/assets/background/2_4_jupyter.jpg&size=cover&opacity=25
+---?image=presentation/assets/background/2_4_jupyter.jpg&size=cover&opacity=35
 
 ### Jupyter
 
@@ -209,6 +209,6 @@ This notebook will cover the analysis of restaurant data for Wake County, North 
 
 R is a powerful language for performing analysis.  We've seen just a few of the many valuable uses of R.
 
-To learn more, go here:  <a href="http://csmore.info/on/cleansing">http://CSmore.info/on/cleansing</a>
+To learn more, go here:  <a href="http://csmore.info/on/r">http://CSmore.info/on/r</a>
 
 And for help, contact me:  <a href="mailto:feasel@catallaxyservices.com">feasel@catallaxyservices.com</a> | <a href="https://www.twitter.com/feaselkl">@feaselkl</a>
