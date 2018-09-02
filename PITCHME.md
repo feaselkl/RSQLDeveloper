@@ -102,7 +102,7 @@ Note that R is not the only data analysis language you could learn.  Julia and P
 3. Connecting to SQL Server
 4. Getting A Taste Of R
 
----
+---?image=presentation/assets/background/2_6_tree.jpg&size=cover&opacity=15
 
 ### Getting the Right Version
 
