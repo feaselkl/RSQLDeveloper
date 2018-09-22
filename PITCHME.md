@@ -4,7 +4,7 @@
 
 ## R for the SQL Server Developer
 
-<a href="http://www.catallaxyservices.com">Kevin Feasel</a> (<a href="https://twitter.com/feaselkl">@feaselkl</a>)
+<a href="http://www.catallaxyservices.com">Kevin Feasel</a> (<a href="https://twitter.com/feaselkl">@feaselkl</a>)<br />
 <a href="http://csmore.info/on/r">http://CSmore.info/on/r</a>
 
 ---
