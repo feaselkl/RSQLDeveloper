@@ -50,7 +50,7 @@ R is an off-shoot of the S language and is built on top of C.
 ![R logo](presentation/assets/image/R_logo.png)
 @divend
 
----?image=presentation/assets/background/1_1_ecosystem.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/1_1_ecosystem.jpg&size=cover&opacity=20
 
 ### Why Use R?
 
@@ -62,7 +62,7 @@ As a data analysis Domain Specific Language (DSL):
 
 R helps you go well beyond simple Excel analysis and pivot tables.
 
----?image=presentation/assets/background/2_2_motivation.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_2_motivation.jpg&size=cover&opacity=20
 
 ### Motivation
 
@@ -102,7 +102,7 @@ Note that R is not the only data analysis language you could learn.  Julia and P
 3. Connecting to SQL Server
 4. Getting A Taste Of R
 
----?image=presentation/assets/background/2_6_tree.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_6_tree.jpg&size=cover&opacity=20
 
 ### Getting the Right Version
 
@@ -114,7 +114,7 @@ Note that R is not the only data analysis language you could learn.  Julia and P
 There are two major branches of R of interest to us:  base R and Microsoft R.  "Base" R is managed by the R Consortium and is entirely open-source.  Microsoft takes base R and adds additional libraries and support.
 @divend
 
----?image=presentation/assets/background/2_1_library.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_1_library.jpg&size=cover&opacity=20
 
 @title[Versions]
 
@@ -125,7 +125,7 @@ There are two major branches of R of interest to us:  base R and Microsoft R.  "
 | Microsoft R Client | ScaleR, 2 threads | In-memory |
 | Microsoft R Server | Full paralleism | Memory or disk |
 
----?image=presentation/assets/background/2_3_ide.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_3_ide.jpg&size=cover&opacity=20
 
 ### Choosing An IDE
 
@@ -141,7 +141,7 @@ We will also install Jupyer Notebooks and use it during this talk.  Installing J
 
 Jupyter (which name derives from a combination of the languages Julia, Python, and R) is a great framework because it has support for dozens of languages.  Microsoft uses Jupyter Notebooks for its Azure Machine Learning products.
 
----?image=presentation/assets/background/2_5_notebook.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/2_5_notebook.jpg&size=cover&opacity=20
 
 ### Why Notebooks?
 
@@ -157,7 +157,7 @@ Notebooks are a way of mixing Markdown-enabled text and language snippets to mak
 3. Connecting to SQL Server
 4. Getting A Taste Of R
 
----?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=20
 
 ### Demo Time
 
@@ -171,7 +171,7 @@ Notebooks are a way of mixing Markdown-enabled text and language snippets to mak
 3. **Connecting to SQL Server**
 4. Getting A Taste Of R
 
----?image=presentation/assets/background/3_1_connection.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/3_1_connection.jpg&size=cover&opacity=20
 
 ### Connecting to SQL Server
 
@@ -179,7 +179,7 @@ Connecting to a SQL Server database (or any other relational database) is easy w
 
 You could also pass in a connection string if you don't want to set up a DSN.
 
----?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=20
 
 ### Demo Time
 
@@ -193,13 +193,13 @@ You could also pass in a connection string if you don't want to set up a DSN.
 3. Connecting to SQL Server
 4. **Getting A Taste Of R**
 
----?image=presentation/assets/background/4_1_restaurant.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/4_1_restaurant.jpg&size=cover&opacity=20
 
 No single talk will expose the full gamut of what you can do with R, but this next section will try to hit a few of the highlights.  If this feels a bit overwhelming, don't fret:  you can grab the notebook and try it out yourself.
 
 This notebook will cover the analysis of restaurant data for Wake County, North Carolina over a multi-year period.
 
----?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=15
+---?image=presentation/assets/background/4_5_demo.jpg&size=cover&opacity=20
 
 ### Demo Time
 
