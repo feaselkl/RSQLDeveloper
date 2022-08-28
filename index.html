@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Catallaxy Services | R for the SQL Server Developer</title>
+
+		<link rel="stylesheet" href="../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../WebsiteAssets/mods.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h2>R for the SQL Server Developer</h2>
+					
+					<a href="https://www.catallaxyservices.com">Kevin Feasel</a> (<a href="https://twitter.com/feaselkl">@feaselkl</a>)<br />
+					<a href="https://csmore.info/on/r">https://csmore.info/on/r</a>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Who Am I?  What Am I Doing Here?</h3>
+					<div class="container">
+						<div class="col">
+							<table class="whoami">
+								<tr>
+									<td><a href="https://csmore.info"><img src="../WebsiteAssets/Logo.png" height="100" /></a></td>
+									<td nowrap><a href="https://csmore.info">Catallaxy Services</a></td>
+								</tr>
+								<tr>
+									<td><a href="https://curatedsql.com"><img src="../WebsiteAssets/CuratedSQLLogo.png" height="100" /></a></td>
+									<td nowrap><a href="https://curatedsql.com">Curated SQL</a></td>
+								</tr>
+								<tr>
+									<td><a href="https://www.apress.com/us/book/9781484254608"><img src="../WebsiteAssets/PolyBaseRevealed.png" height="120" /></a></td>
+									<td nowrap><a href="https://www.apress.com/us/book/9781484254608">PolyBase Revealed</a></td>
+								</tr>
+							</table>
+						</div>
+						<div class="col">
+							<a href="http://www.twitter.com/feaselkl"><img src="../WebsiteAssets/HeadShot.jpg" height="358" width="315" /></a>
+							<br />
+							<a href="http://www.twitter.com/feaselkl">@feaselkl</a>
+						</div>					
+					</div>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>What Is R?</h3>
+					
+					<div class="container">
+						<div class="col">
+							<p>R is a language focused around performing statistical analysis, predictive modeling, and data cleansing.</p>
+
+							<p>R is an off-shoot of the S language and is built on top of C.</p>
+						</div>
+						<div class="col">
+							<img src="presentation/assets/image/R_logo.png" height="400" />
+						</div>					
+					</div>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/1_1_ecosystem.jpg" data-background-opacity="0.2">
+					<h3>Why Use R?</h3>
+					
+					<p>As a data analysis Domain Specific Language (DSL):</p>
+
+					<ul>
+						<li>R has a large number of built-in functions for performing operations, including aggregates, statistical analysis, and graphing and plotting.</li>
+						<li>The R ecosystem is vast, with over 17K packages in CRAN.</li>
+						<li>R language constructs make set-based analysis and operation easy.</li>
+					</ul>
+					
+					<p>R helps you go well beyond simple Excel analysis and pivot tables.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_2_motivation.jpg" data-background-opacity="0.2">
+					<h3>Motivation</h3>
+					
+					<p>My goals in this talk:</p>
+
+					<ul>
+						<li>Introduce you to the R ecosystem and language.</li>
+						<li>Introduce you to the value of notebooks.</li>
+						<li>Get you thinking about ways you could use R today.</li>
+					</ul>
+
+					<p>Note that R is not the only data analysis language you could learn.  Julia and Python are also great languages, and there are very good closed-source, commercial tools like SAS.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<img src="presentation/assets/image/calllog.png" alt="Reviewing stored procedure calls." />
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<img src="presentation/assets/image/cpuplot.png" alt="Graphing CPU utilization." />
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<img src="presentation/assets/image/Post2016ColumnstoreDuration.png" alt="Tracking clustered columnstore improvements going to SQL Server 2016." />
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Agenda</h3>
+					
+					<ol>
+						<li class="active">Installing R and Tools</li>
+						<li>Learning the Basics</li>
+						<li>Conntecting to SQL Server</li>
+						<li>Getting a Taste of R</li>
+					</ol>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_6_tree.jpg" data-background-opacity="0.2">
+					<h3>Getting the Right Version</h3>
+					
+					<div class="container">
+						<div class="col">
+							<img src="presentation/assets/image/RCircle.png" alt="The concentric circle of R libraries." />
+						</div>
+						<div class="col">
+							<p>There are two major branches of R of interest to us:  base R and Microsoft R.  "Base" R is managed by the R Consortium and is entirely open-source.  Microsoft takes base R and adds additional libraries and support.</p>
+						</div>					
+					</div>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_1_library.jpg" data-background-opacity="0.2" data-markdown>
+					<textarea data-template>
+					### Versions
+					
+					| Type | Parallelism | Data Size |
+					| :--- | :---------- | :-------- |
+					| Base R | Parallel libraries | In-memory |
+					| Microsoft R Open | MKL w/o ScaleR | In-memory |
+					| Microsoft R Client | ScaleR, 2 threads | In-memory |
+					| Microsoft R Server | Full paralleism | Memory or disk |
+					</textarea>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_3_ide.jpg" data-background-opacity="0.2">
+					<h3>Choosing an IDE</h3>
+					
+					<p>There is one big IDE available:  RStudio.  RStudio is a standalone installation and provides a nice development interface for R.</p>
+
+					<p>Microsoft had also made available R Tools for Visual Studio (RTVS), a Visual Studio plug-in.  It offers some interesting features like making SQL Server R Services integration easier, and it integrates with other Visual Studio projects. It was built into Visual Studio 2017 but removed from SQL Server 2019.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_4_jupyter.jpg" data-background-opacity="0.2">
+					<h3>Jupyter</h3>
+					
+					<p>We will also install Jupyer Notebooks and use it during this talk.  Installing Jupyter takes a few steps, but the links for this talk include a step-by-step walkthrough.  The easiest way to install Jupyter is to use Anaconda, a data science suite for Python.</p>
+
+					<p>Jupyter (which name derives from a combination of the languages Julia, Python, and R) is a great framework because it has support for dozens of languages.  Microsoft uses Jupyter Notebooks for its Azure Machine Learning products.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/2_5_notebook.jpg" data-background-opacity="0.2">
+					<h3>Why Notebooks?</h3>
+					
+					<p>Notebooks are a way of mixing Markdown-enabled text and language snippets to make your thoughts clear to others.  You can create and share notebooks, allowing others easily to test your process and follow along.  Notebooks are also an excellent teaching mechanism.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Agenda</h3>
+					
+					<ol>
+						<li>Installing R and Tools</li>
+						<li class="active">Learning the Basics</li>
+						<li>Conntecting to SQL Server</li>
+						<li>Getting a Taste of R</li>
+					</ol>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/4_5_demo.jpg" data-background-opacity="0.2">
+					<h3>Demo Time</h3>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Agenda</h3>
+					
+					<ol>
+						<li>Installing R and Tools</li>
+						<li>Learning the Basics</li>
+						<li class="active">Conntecting to SQL Server</li>
+						<li>Getting a Taste of R</li>
+					</ol>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/3_1_connection.jpg" data-background-opacity="0.2">
+					<h3>Connecting to SQL Server</h3>
+					
+					<p>Connecting to a SQL Server database (or any other relational database) is easy with R.  The first step is to install the RODBC or DBI pacakage to give your R code ODBC support.  From there, you can connect to a system data source that you've defined in your ODBC Data Sources.</p>
+
+					<p>You could also pass in a connection string if you don't want to set up a DSN.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/4_5_demo.jpg" data-background-opacity="0.2">
+					<h3>Demo Time</h3>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Agenda</h3>
+					
+					<ol>
+						<li>Installing R and Tools</li>
+						<li>Learning the Basics</li>
+						<li>Conntecting to SQL Server</li>
+						<li class="active">Getting a Taste of R</li>
+					</ol>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/4_1_restaurant.jpg" data-background-opacity="0.2">
+					<h3>Getting a Taste of R</h3>
+				
+					<p>No single talk will expose the full gamut of what you can do with R, but this next section will try to hit a few of the highlights.  If this feels a bit overwhelming, don't fret:  you can grab the notebook and try it out yourself.</p>
+
+					<p>This notebook will cover the analysis of restaurant data for Wake County, North Carolina over a multi-year period.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/background/4_5_demo.jpg" data-background-opacity="0.2">
+					<h3>Demo Time</h3>
+				</section>
+
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Wrapping Up</h3>
+					
+					<p>R is a powerful language for performing analysis.  We've seen just a few of the many valuable uses of R.</p>
+				</section>
+				
+				<section data-background-image="presentation/assets/image/Bubbles.jpg" data-background-opacity="0.4">
+					<h3>Wrapping Up</h3>
+					
+					<p>
+						To learn more, go here:
+						<br />
+						<a href="https://csmore.info/on/r">https://csmore.info/on/r</a>
+					</p>
+					<br />
+					<p>
+						And for help, contact me:
+						<br />
+						<a href="mailto:feasel@catallaxyservices.com">feasel@catallaxyservices.com</a> | <a href="https://www.twitter.com/feaselkl">@feaselkl</a>
+					</p>
+					<br />
+					<p>
+						Catallaxy Services consulting:
+						<br />
+						<a href="https://csmore.info/contact">https://CSmore.info/on/contact</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal.js/dist/reveal.js"></script>
+		<script src="../reveal.js/plugin/zoom/zoom.js"></script>
+		<script src="../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../reveal.js/plugin/search/search.js"></script>
+		<script src="../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../reveal.js/plugin/math/math.js"></script>
+		<script src="../reveal.js/plugin/menu/menu.js"></script>
+		<script src="../reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="../reveal.js/plugin/chart/Chart.min.js"></script>
+		<script src="../reveal.js/plugin/chart/plugin.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				width: '70%',
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				transition: 'fade',
+				
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath, RevealMenu, RevealChart ]
+			});
+		</script>
+	</body>
+</html>
